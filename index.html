@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gudang Koding</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Gudang Kode</h1>
+    <p>Ngoding with Khoiruddin</p>
+    <a href="admin.html" class="admin-link">Admin Panel</a>
+  </header>
+
+  <main>
+    <section class="categories">
+      <h2>Pilih Kategori Bahasa Pemrograman</h2>
+      <div class="language-list">
+        <div class="language-item" onclick="showForm('HTML')">
+          <img src="images/html.png" alt="HTML Logo">
+          <p>HTML</p>
+        </div>
+        <div class="language-item" onclick="showForm('CSS')">
+          <img src="images/css.png" alt="CSS Logo">
+          <p>CSS</p>
+        </div>
+        <div class="language-item" onclick="showForm('JavaScript')">
+          <img src="images/js.png" alt="JavaScript Logo">
+          <p>JavaScript</p>
+        </div>
+        <div class="language-item" onclick="showForm('Python')">
+          <img src="images/python.png" alt="Python Logo">
+          <p>Python</p>
+        </div>
+        <div class="language-item" onclick="showForm('C++')">
+          <img src="images/cpp.png" alt="C++ Logo">
+          <p>C++</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="coding-form" id="codingForm" style="display: none;">
+      <h2>Tambahkan Kodingan</h2>
+      <form id="codeForm">
+        <label for="editorName">Nama Editor:</label>
+        <input type="text" id="editorName" placeholder="Masukkan nama Anda" required>
+
+        <label for="title">Judul Kodingan:</label>
+        <input type="text" id="title" placeholder="Masukkan judul kodingan Anda" required>
+
+        <label for="code">Masukkan Kodingan:</label>
+        <textarea id="code" rows="15" placeholder="Tulis kodingan Anda di sini"></textarea>
+        <button type="submit">Simpan</button>
+      </form>
+    </section>
+
+    <section class="saved-codes">
+      <h2>Kodingan Tersimpan</h2>
+      <div id="codeContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Gudang Code</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

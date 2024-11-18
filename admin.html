@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+  </header>
+
+  <main>
+    <section class="admin-login">
+      <h2>Login</h2>
+      <form id="adminForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Admin Panel</p>
+  </footer>
+
+  <script>
+    const adminForm = document.getElementById('adminForm');
+    adminForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username === 'admin' && password === '1234') {
+        alert('Login Berhasil');
+        window.location.href = 'edit.html'; // Ganti dengan halaman edit utama
+      } else {
+        alert('Username atau Password salah!');
+      }
+    });
+  </script>
+</body>
+</html>
